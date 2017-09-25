@@ -286,3 +286,11 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+# Core wwwroot restored folder
+**/wwwroot/lib/
+
+# AppSpecific
+**/Scripts/vmSizes/*.json
+appsettings.Development.json
+appsettings.Release.json

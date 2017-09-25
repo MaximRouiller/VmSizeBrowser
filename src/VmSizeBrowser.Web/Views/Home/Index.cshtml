@@ -1,0 +1,90 @@
+﻿<div id="app">   
+
+    <div class="row">
+        <form>
+            <div class="col-xs-12 col-md-6 col-lg-2">
+                <div class="form-group">
+                    <label for="region">Region</label>
+                    <select class="form-control" id="region">
+                        @foreach (var region in ViewBag.Regions)
+                        {
+                            <option value="@region">@region</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-2">
+                <div class="form-group">
+                    <label for="">Minimum vCores</label>
+                    <input type="range" id="minimumVCore" min="0" max="64" step="2" value="0" />
+                    <span id="selectedvCores">0</span>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-2">
+                <div class="form-group">
+                    <label for="">Minimum Memory (GB)</label>
+                    <input type="range" id="minimumMemory" min="0" max="512" value="0" />
+                    <span id="selectedMemory">0</span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <table id="table" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Friendly Name</th>
+                        <th>Tier</th>
+                        <th>API Name</th>
+                        <th>vCores</th>
+                        <th>Memory (GB)</th>
+                        <th>Max NICs</th>
+                        <th>GPUs</th>
+                        <th>Maximum data disk count</th>
+                        <th>OS Disk Size (GB)</th>
+                        <th>Temp storage Size (GB)</th>
+                    </tr>
+                </thead>
+                <!-- <tbody>
+                    <tr v-for="vmSize in vmSizes" v-show="vmSizes.length > 0">
+                        <td>{{vmSize.friendlyName}}</td>
+                        <td>{{vmSize.tier}}</td>
+                        <td>{{vmSize.apiName}}</td>
+                        <td>{{vmSize.numberOfCores}}</td>
+                        <td>{{vmSize.memoryInMb | divideBy1024}}</td>
+                        <td>{{vmSize.maxNICs}}</td>
+                        <td>{{vmSize.gpuCount}}</td>
+                        <td>{{vmSize.maxDataDiskCount}}</td>
+                        <td>{{vmSize.osDiskSizeInMb | divideBy1024}}</td>
+                        <td>{{vmSize.resourceDiskSizeInMb | divideBy1024}}</td>
+                    </tr>
+                </tbody> -->
+                <tfoot>
+                    <tr>
+                        <th>Friendly Name</th>
+                        <th>Tier</th>
+                        <th>API Name</th>
+                        <th>vCores</th>
+                        <th>Memory (GB)</th>
+                        <th>Max NICs</th>
+                        <th>GPUs</th>
+                        <th>Maximum data disk count</th>
+                        <th>OS Disk Size (GB)</th>
+                        <th>Temp storage Size (GB)</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+@section Scripts {
+
+    <script>
+        
+    </script>
+}

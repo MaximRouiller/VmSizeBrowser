@@ -1,0 +1,612 @@
+﻿{
+  "Standard_D2s_v3": {
+    "maxIOPS": 4000,
+    "maxNICs": 2,
+    "networkPerformance": "moderate"
+  },
+  "Standard_D4s_v3": {
+    "maxIOPS": 8000,
+    "maxNICs": 2,
+    "networkPerformance": "moderate"
+  },
+  "Standard_D8s_v3": {
+    "maxIOPS": 16000,
+    "maxNICs": 4,
+    "networkPerformance": "high"
+  },
+  "Standard_D16s_v3": {
+    "maxIOPS": 32000,
+    "maxNICs": 8,
+    "networkPerformance": "high"
+  },
+  "Standard_D2_v3": {
+    "maxIOPS": 3000,
+    "maxNICs": 2,
+    "networkPerformance": "moderate"
+
+  },
+  "Standard_D4_v3": {
+    "maxIOPS": 6000,
+    "maxNICs": 2,
+    "networkPerformance": "moderate"
+
+  },
+  "Standard_D8_v3": {
+    "maxIOPS": 12000,
+    "maxNICs": 4,
+    "networkPerformance": "high"
+
+  },
+  "Standard_D16_v3": {
+    "maxIOPS": 24000,
+    "maxNICs": 8,
+    "networkPerformance": "high"
+  },
+  "Standard_A0": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "100 Mbps"
+  },
+  "Standard_A1": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "500 Mbps"
+  },
+  "Standard_A2": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "500 Mbps"
+  },
+  "Standard_A3": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "1000 Mbps"
+  },
+  "Standard_A4": {
+    "maxIOPS": 500,
+    "maxNICs": 4,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Standard_A5": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "500 Mbps"
+  },
+  "Standard_A6": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "1000 Mbps"
+  },
+  "Standard_A7": {
+    "maxIOPS": 500,
+    "maxNICs": 4,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Basic_A0": {
+    "maxIOPS": 300,
+    "maxNICs": 2
+  },
+  "Basic_A1": {
+    "maxIOPS": 300,
+    "maxNICs": 2
+  },
+  "Basic_A2": {
+    "maxIOPS": 300,
+    "maxNICs": 2
+  },
+  "Basic_A3": {
+    "maxIOPS": 300,
+    "maxNICs": 2
+  },
+  "Basic_A4": {
+    "maxIOPS": 300,
+    "maxNICs": 2
+  },
+
+
+
+  "Standard_DS1_v2": {
+    "maxIOPS": 4000,
+    "maxNICs": 2,
+    "networkPerformance": "750 Mbps"
+  },
+  "Standard_DS2_v2": {
+    "maxIOPS": 8000,
+    "maxNICs": 2,
+    "networkPerformance": "1500 Mbps"
+  },
+  "Standard_DS3_v2": {
+    "maxIOPS": 8000,
+    "maxNICs": 4,
+    "networkPerformance": "3000 Mbps"
+  },
+  "Standard_DS4_v2": {
+    "maxIOPS": 16000,
+    "maxNICs": 8,
+    "networkPerformance": "6000 Mbps"
+  },
+  "Standard_DS5_v2": {
+    "maxIOPS": 32000,
+    "maxNICs": 8,
+    "networkPerformance": "12000 Mbps"
+  },
+
+
+  "Standard_D1_v2": {
+    "maxIOPS": 3000,
+    "maxNICs": 2,
+    "networkPerformance": "750 Mbps"
+  },
+  "Standard_D2_v2": {
+    "maxIOPS": 6000,
+    "maxNICs": 2,
+    "networkPerformance": "1500 Mbps"
+  },
+  "Standard_D3_v2": {
+    "maxIOPS": 12000,
+    "maxNICs": 4,
+    "networkPerformance": "3000 Mbps"
+  },
+  "Standard_D4_v2": {
+    "maxIOPS": 24000,
+    "maxNICs": 8,
+    "networkPerformance": "6000 Mbps"
+  },
+  "Standard_D5_v2": {
+    "maxIOPS": 48000,
+    "maxNICs": 8,
+    "networkPerformance": "12000 Mbps"
+  },
+
+
+  "Standard_DS1": {
+    "maxIOPS": 4000,
+    "maxNICs": 2,
+    "networkPerformance": "500 Mbps"
+  },
+  "Standard_DS2": {
+    "maxIOPS": 8000,
+    "maxNICs": 2,
+    "networkPerformance": "1000 Mbps"
+  },
+  "Standard_DS3": {
+    "maxIOPS": 16000,
+    "maxNICs": 4,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Standard_DS4": {
+    "maxIOPS": 32000,
+    "maxNICs": 8,
+    "networkPerformance": "4000 Mbps"
+  },
+
+
+  "Standard_D1": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "500 Mbps"
+  },
+  "Standard_D2": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "1000 Mbps"
+  },
+  "Standard_D3": {
+    "maxIOPS": 500,
+    "maxNICs": 4,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Standard_D4": {
+    "maxIOPS": 500,
+    "maxNICs": 8,
+    "networkPerformance": "4000 Mbps"
+  },
+
+
+  "Standard_A1_v2": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "250 Mbps"
+  },
+  "Standard_A2_v2": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "500 Mbps"
+  },
+  "Standard_A4_v2": {
+    "maxIOPS": 500,
+    "maxNICs": 4,
+    "networkPerformance": "1000 Mbps"
+  },
+  "Standard_A8_v2": {
+    "maxIOPS": 500,
+    "maxNICs": 8,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Standard_A2m_v2": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "500 Mbps"
+  },
+  "Standard_A4m_v2": {
+    "maxIOPS": 500,
+    "maxNICs": 4,
+    "networkPerformance": "1000 Mbps"
+  },
+  "Standard_A8m_v2": {
+    "maxIOPS": 500,
+    "maxNICs": 8,
+    "networkPerformance": "2000 Mbps"
+  },
+
+
+  "Standard_F1s": {
+    "maxIOPS": 4000,
+    "maxNICs": 2,
+    "networkPerformance": "750 Mbps"
+  },
+  "Standard_F2s": {
+    "maxIOPS": 8000,
+    "maxNICs": 2,
+    "networkPerformance": "1500 Mbps"
+  },
+  "Standard_F4s": {
+    "maxIOPS": 16000,
+    "maxNICs": 4,
+    "networkPerformance": "3000 Mbps"
+  },
+  "Standard_F8s": {
+    "maxIOPS": 32000,
+    "maxNICs": 8,
+    "networkPerformance": "6000 Mbps"
+  },
+  "Standard_F16s": {
+    "maxIOPS": 64000,
+    "maxNICs": 8,
+    "networkPerformance": "12000 Mbps"
+  },
+
+  "Standard_F1": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "750 Mbps"
+  },
+  "Standard_F2": {
+    "maxIOPS": 500,
+    "maxNICs": 2,
+    "networkPerformance": "1500 Mbps"
+  },
+  "Standard_F4": {
+    "maxIOPS": 500,
+    "maxNICs": 4,
+    "networkPerformance": "3000 Mbps"
+  },
+  "Standard_F8": {
+    "maxIOPS": 500,
+    "maxNICs": 8,
+    "networkPerformance": "6000 Mbps"
+  },
+  "Standard_F16": {
+    "maxIOPS": 500,
+    "maxNICs": 8,
+    "networkPerformance": "12000 Mbps"
+  },
+
+
+  "Standard_E2s_v3": {
+    "maxIOPS": 4000,
+    "maxNICs": 2,
+    "networkPerformance": "moderate"
+  },
+  "Standard_E4s_v3": {
+    "maxIOPS": 8000,
+    "maxNICs": 2,
+    "networkPerformance": "moderate"
+  },
+  "Standard_E8s_v3": {
+    "maxIOPS": 16000,
+    "maxNICs": 4,
+    "networkPerformance": "high"
+  },
+  "Standard_E16s_v3": {
+    "maxIOPS": 32000,
+    "maxNICs": 8,
+    "networkPerformance": "high"
+  },
+  "Standard_E32s_v3": {
+    "maxIOPS": 64000,
+    "maxNICs": 8,
+    "networkPerformance": "extremely high"
+  },
+  "Standard_E64s_v3": {
+    "maxIOPS": 128000,
+    "maxNICs": 8,
+    "networkPerformance": "extremely high"
+  },
+
+
+  "Standard_E2_v3": {
+    "maxIOPS": 3000,
+    "maxNICs": 2,
+    "networkPerformance": "moderate"
+  },
+  "Standard_E4_v3": {
+    "maxIOPS": 6000,
+    "maxNICs": 2,
+    "networkPerformance": "moderate"
+  },
+  "Standard_E8_v3": {
+    "maxIOPS": 12000,
+    "maxNICs": 4,
+    "networkPerformance": "high"
+  },
+  "Standard_E16_v3": {
+    "maxIOPS": 24000,
+    "maxNICs": 8,
+    "networkPerformance": "high"
+  },
+  "Standard_E32_v3": {
+    "maxIOPS": 48000,
+    "maxNICs": 8,
+    "networkPerformance": "extremely high"
+  },
+  "Standard_E64_v3": {
+    "maxIOPS": 96000,
+    "maxNICs": 8,
+    "networkPerformance": "extremely high"
+  },
+
+  "Standard_M64s": {
+    "maxIOPS": 80000,
+    "maxNICs": 8,
+    "networkPerformance": "16000 Mbps"
+  },
+  "Standard_M64ms": {
+    "maxIOPS": 80000,
+    "maxNICs": 8,
+    "networkPerformance": "16000 Mbps"
+  },
+  "Standard_M128s": {
+    "maxIOPS": 160000,
+    "maxNICs": 8,
+    "networkPerformance": "25000 Mbps"
+  },
+
+
+  "Standard_GS1": {
+    "maxIOPS": 10000,
+    "maxNICs": 2,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Standard_GS2": {
+    "maxIOPS": 20000,
+    "maxNICs": 2,
+    "networkPerformance": "4000 Mbps"
+  },
+  "Standard_GS3": {
+    "maxIOPS": 40000,
+    "maxNICs": 4,
+    "networkPerformance": "8000 Mbps"
+  },
+  "Standard_GS4": {
+    "maxIOPS": 80000,
+    "maxNICs": 8,
+    "networkPerformance": "16000 Mbps"
+  },
+  "Standard_GS5": {
+    "maxIOPS": 160000,
+    "maxNICs": 8,
+    "networkPerformance": "20000 Mbps"
+  },
+
+
+  "Standard_G1": {
+    "maxIOPS": 6000,
+    "maxNICs": 2,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Standard_G2": {
+    "maxIOPS": 12000,
+    "maxNICs": 2,
+    "networkPerformance": "4000 Mbps"
+  },
+  "Standard_G3": {
+    "maxIOPS": 24000,
+    "maxNICs": 4,
+    "networkPerformance": "8000 Mbps"
+  },
+  "Standard_G4": {
+    "maxIOPS": 48000,
+    "maxNICs": 8,
+    "networkPerformance": "16000 Mbps"
+  },
+  "Standard_G5": {
+    "maxIOPS": 96000,
+    "maxNICs": 8,
+    "networkPerformance": "20000 Mbps"
+  },
+
+
+
+  "Standard_DS11_v2": {
+    "maxIOPS": 8000,
+    "maxNICs": 2,
+    "networkPerformance": "1500 Mbps"
+  },
+  "Standard_DS12_v2": {
+    "maxIOPS": 16000,
+    "maxNICs": 4,
+    "networkPerformance": "3000 Mbps"
+  },
+  "Standard_DS13_v2": {
+    "maxIOPS": 32000,
+    "maxNICs": 8,
+    "networkPerformance": "6000 Mbps"
+  },
+  "Standard_DS14_v2": {
+    "maxIOPS": 64000,
+    "maxNICs": 8,
+    "networkPerformance": "12000 Mbps"
+  },
+  "Standard_DS15_v2": {
+    "maxIOPS": 80000,
+    "maxNICs": 8,
+    "networkPerformance": "20000 Mbps"
+  },
+
+
+  "Standard_D11_v2": {
+    "maxIOPS": 6000,
+    "maxNICs": 2,
+    "networkPerformance": "1500 Mbps"
+  },
+  "Standard_D12_v2": {
+    "maxIOPS": 12000,
+    "maxNICs": 4,
+    "networkPerformance": "3000 Mbps"
+  },
+  "Standard_D13_v2": {
+    "maxIOPS": 24000,
+    "maxNICs": 8,
+    "networkPerformance": "6000 Mbps"
+  },
+  "Standard_D14_v2": {
+    "maxIOPS": 48000,
+    "maxNICs": 8,
+    "networkPerformance": "12000 Mbps"
+  },
+  "Standard_D15_v2": {
+    "maxIOPS": 60000,
+    "maxNICs": 8,
+    "networkPerformance": "20000 Mbps"
+  },
+
+  "Standard_DS11": {
+    "maxIOPS": 8000,
+    "maxNICs": 2,
+    "networkPerformance": "1000 Mbps"
+  },
+  "Standard_DS12": {
+    "maxIOPS": 16000,
+    "maxNICs": 4,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Standard_DS13": {
+    "maxIOPS": 32000,
+    "maxNICs": 8,
+    "networkPerformance": "4000 Mbps"
+  },
+  "Standard_DS14": {
+    "maxIOPS": 64000,
+    "maxNICs": 8,
+    "networkPerformance": "8000 Mbps"
+  },
+
+  "Standard_D11": {
+    "maxIOPS": 6000,
+    "maxNICs": 2,
+    "networkPerformance": "1000 Mbps"
+  },
+  "Standard_D12": {
+    "maxIOPS": 12000,
+    "maxNICs": 4,
+    "networkPerformance": "2000 Mbps"
+  },
+  "Standard_D13": {
+    "maxIOPS": 24000,
+    "maxNICs": 8,
+    "networkPerformance": "4000 Mbps"
+  },
+  "Standard_D14": {
+    "maxIOPS": 48000,
+    "maxNICs": 8,
+    "networkPerformance": "8000 Mbps"
+  },
+
+  "Standard_L4s": {
+    "maxIOPS": 5000,
+    "maxNICs": 2,
+    "networkPerformance": "4000 Mbps"
+  },
+  "Standard_L8s": {
+    "maxIOPS": 10000,
+    "maxNICs": 2,
+    "networkPerformance": "8000 Mbps"
+  },
+  "Standard_L16s": {
+    "maxIOPS": 20000,
+    "maxNICs": 2,
+    "networkPerformance": "16000 Mbps"
+  },
+  "Standard_L32s": {
+    "maxIOPS": 40000,
+    "maxNICs": 8,
+    "networkPerformance": "20000 Mbps"
+  },
+
+
+  "Standard_NV6": {
+    "gpuCount": 1
+  },
+  "Standard_NV12": {
+    "gpuCount": 2
+  },
+  "Standard_NV24": {
+    "gpuCount": 4
+  },
+  "Standard_NC6": {
+    "gpuCount": 1
+  },
+  "Standard_NC12": {
+    "gpuCount": 2
+  },
+  "Standard_NC24": {
+    "gpuCount": 4
+  },
+  "Standard_NC24r": {
+    "gpuCount": 4
+  },
+
+
+  "Standard_A8": {
+    "maxIOPS": 8000,
+    "maxNICs": 2
+  },
+  "Standard_A9": {
+    "maxIOPS": 8000,
+    "maxNICs": 4
+  },
+  "Standard_A10": {
+    "maxIOPS": 8000,
+    "maxNICs": 2
+  },
+  "Standard_A11": {
+    "maxIOPS": 8000,
+    "maxNICs": 4
+  },
+
+  "Standard_H8": {
+    "maxIOPS": 8000,
+    "maxNICs": 2
+  },
+  "Standard_H16": {
+    "maxIOPS": 16000,
+    "maxNICs": 4
+  },
+  "Standard_H8m": {
+    "maxIOPS": 8000,
+    "maxNICs": 2
+  },
+  "Standard_H16m": {
+    "maxIOPS": 16000,
+    "maxNICs": 4
+  },
+  "Standard_H16r": {
+    "maxIOPS": 16000,
+    "maxNICs": 4
+  },
+  "Standard_H16mr": {
+    "maxIOPS": 16000,
+    "maxNICs": 4
+  }
+}
