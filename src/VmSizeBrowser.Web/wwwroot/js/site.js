@@ -67,21 +67,21 @@ $(document).ready(function () {
        appInsights.trackEvent('memoryChanged', { minMemory: $(this).val() });
        $("#table").DataTable().table().draw();
    });
-})
 
-$.fn.dataTable.ext.search.push(
-   function (settings, data, dataIndex) {
-       var minMemory = parseInt($('#minimumMemory').val(), 0);
-       var minVCore = parseInt($('#minimumVCore').val(), 0);
-       var vcore = parseFloat(data[3]) || 0;
-       var memory = parseFloat(data[4]) || 0;
-
-       if (minVCore <= vcore && minMemory <= memory) {
-           return true;
-       }
-       return false;
+   $.fn.dataTable.ext.search.push(
+      function (settings, data, dataIndex) {
+          var minMemory = parseInt($('#minimumMemory').val(), 0);
+          var minVCore = parseInt($('#minimumVCore').val(), 0);
+          var vcore = parseFloat(data[3]) || 0;
+          var memory = parseFloat(data[4]) || 0;
+   
+          if (minVCore <= vcore && minMemory <= memory) {
+              return true;
+          }
+          return false;
+      }
+   );
+   function megabytesToGigabytes(data) {
+      return data / 1024;
    }
-);
-function megabytesToGigabytes(data) {
-   return data / 1024;
-}
+});
