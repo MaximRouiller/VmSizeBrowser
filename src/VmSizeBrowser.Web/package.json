@@ -1,0 +1,29 @@
+{
+  "name": "vmsizebrowser",
+  "version": "1.0.0",
+  "description": "This is an experiment on giving a different views to the different SKUs for VMs available on Azure.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/webpack webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximRouiller/VmSizeBrowser.git"
+  },
+  "keywords": [
+    "virtual",
+    "machine",
+    "web"
+  ],
+  "author": "Maxime Rouiller",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.7.2",
+    "webpack": "^3.6.0"
+  }
+}
