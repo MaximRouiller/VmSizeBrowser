@@ -18,7 +18,7 @@ namespace VirtualMachineSizeBrowser.Controllers
             this.storage = storage;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             return View();
         }
