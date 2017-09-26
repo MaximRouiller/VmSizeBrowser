@@ -20,7 +20,6 @@ namespace VirtualMachineSizeBrowser.Controllers
 
         public async Task<IActionResult> Index()
         {
-            ViewBag.Regions = await storage.GetRegions();
             return View();
         }
         

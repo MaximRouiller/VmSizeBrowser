@@ -28,6 +28,8 @@
     "webpack": "^3.6.0"
   },
   "dependencies": {
-    "numeral": "^2.0.6"
+    "numeral": "^2.0.6",
+    "vue-slider-component": "^2.4.1",
+    "vue-tables-2": "^0.6.74"
   }
 }
