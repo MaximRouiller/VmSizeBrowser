@@ -1,12 +1,17 @@
-﻿const $ = require('jquery');
-const numeral = require('numeral');
-const vmSizes = require('./data/vmSizesData');
-const vueSlider = require('vue-slider-component')
+﻿import $ from 'jquery';
+import numeral from 'numeral';
+import vmSizes  from './data/vmSizesData';
+import vueSlider  from 'vue-slider-component';
+import { TableComponent, TableColumn} from 'vue-table-component';
+import VueRouter from 'vue-router'
+Vue.use(VueRouter);
+
 
 let app = new Vue({
     el: '#app',
     components: {
-        vueSlider
+        vueSlider,
+        TableComponent,TableColumn
     },
     data: {
         // data to preload

@@ -1,4 +1,4 @@
-﻿<div id="app">   
+﻿<div id="app">
 
     <div class="row">
         <form>
@@ -14,17 +14,16 @@
             <div class="col-xs-12 col-md-6 col-lg-2">
                 <div class="form-group">
                     <label for="selectedVCores">vCores</label>
-                    <!-- <input type="range" id="minimumVCore" min="0" max="64" step="2" value="0" /> -->
-                    
-                    <vue-slider id="selectedVCores" v-model="VCoreValues" :piecewise="true" :min="0" :max="64" :interval="2" tooltip-dir="bottom" tooltip="always"></vue-slider>
+                    <vue-slider id="selectedVCores" v-model="VCoreValues" :piecewise="true" :min="0" :max="64" :interval="2" tooltip-dir="bottom"
+                        tooltip="always"></vue-slider>
                 </div>
             </div>
 
             <div class="col-xs-12 col-md-6 col-lg-2">
                 <div class="form-group">
                     <label for="">Minimum Memory (GB)</label>
-                    <!-- <input type="range" id="minimumMemory" min="0" max="512" value="0" /> -->
-                    <vue-slider id="selectedMemory" v-model="VMemoryValues" :piecewise="true" :min="0" :max="512" :interval="32" tooltip-dir="bottom" tooltip="always"></vue-slider>
+                    <vue-slider id="selectedMemory" v-model="VMemoryValues" :piecewise="true" :min="0" :max="512" :interval="32" tooltip-dir="bottom"
+                        tooltip="always"></vue-slider>
                 </div>
             </div>
 
@@ -32,6 +31,34 @@
     </div>
 
     <div class="row" style="padding-top: 20px;">
+        <div class="col-xs-12">
+            <table-component :data="computedVmSizes" table-class="table">
+                <table-column show="friendlyName" label="Friendly name"></table-column>
+                <table-column show="tier" label="Tier"></table-column>
+                <table-column show="apiName" label="API Name"></table-column>
+                <table-column show="numberOfCores" label="vCores" data-type="numeric"></table-column>
+                <table-column show="memoryInMb" label="Memory (GiB)" data-type="numeric">
+                    <template scope="row">
+                        {{row.memoryInMb | formatByteSizes}}
+                    </template>
+                </table-column>
+                <table-column show="maxNICs" label="Max NICs" data-type="numeric"></table-column>
+                <table-column show="gpuCount" label="GPUs" data-type="numeric"></table-column>
+                <table-column show="maxDataDiskCount" label="Maximum data disk count" data-type="numeric"></table-column>
+                <table-column show="osDiskSizeInMb" label="OS Disk Size (GiB)" data-type="numeric">
+                    <template scope="row">
+                        {{row.osDiskSizeInMb | formatByteSizes}}
+                    </template>
+                </table-column>
+                <table-column show="resourceDiskSizeInMb" label="Temp storage Size (GiB)" data-type="numeric">
+                    <template scope="row">
+                        {{row.resourceDiskSizeInMb | formatByteSizes}}
+                    </template>
+                </table-column>
+            </table-component>
+        </div>
+    </div>
+    <!-- <div class="row" style="padding-top: 20px;">
         <div class="col-xs-12">
             <table id="table" class="table display" cellspacing="0" width="100%">
                 <thead>
@@ -78,11 +105,10 @@
                 </tfoot>
             </table>
         </div>
-    </div>
+    </div> -->
 </div>
 @section Scripts {
 
-    <script>
-        
-    </script>
+<script>
+</script>
 }
