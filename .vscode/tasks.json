@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [{
+        "taskName": "build",
+        "type": "shell",
+        "windows": {
+            "command": "cd src/VmSizeBrowser.Web; npm start"
+        },
+        "linux": {
+            "command": "cd src/VmSizeBrowser.Web && npm start"
+        },
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }]
+}
