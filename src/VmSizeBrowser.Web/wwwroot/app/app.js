@@ -1,54 +1,22 @@
-﻿import $ from 'jquery';
-import numeral from 'numeral';
-import vmSizes  from './data/vmSizesData';
-import vueSlider  from 'vue-slider-component';
-import { TableComponent, TableColumn} from 'vue-table-component';
+﻿import Vue from 'vue';
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
+import $ from 'jquery';
 
-let app = new Vue({
-    el: '#app',
-    components: {
-        vueSlider,
-        TableComponent,TableColumn
-    },
-    data: {
-        // data to preload
-        vmSizes: [],
-        availableRegions: [],
-        // default values
-        selectedRegion: 'EastUS',
-        VCoreValues: [0, 64],
-        VMemoryValues: [0, 512]
-    },
-    computed: {
-        computedVmSizes: function () {
-            let self = this;
-            return this.vmSizes.filter(function (item) {
-                var memoryInGb = item.memoryInMb / 1024;
-                return item.numberOfCores >= self.VCoreValues[0] && item.numberOfCores <= self.VCoreValues[1] &&
-                    memoryInGb >= self.VMemoryValues[0] && memoryInGb <= self.VMemoryValues[1];
-            });
-        }
-    },
-    filters: {
-        formatByteSizes: function (data) {
-            return numeral(data / 1024).format('0[.]00');
-        }
+import home from './components/home.vue'
 
-    },
-    mounted: function () {
-        let self = this;
-        vmSizes.getAllVmSizesForRegionPromise(self.selectedRegion).then(function (data) {
-            self.vmSizes = data;
-        });
+const routes = [{
+    path: '/',
+    component: home
+}];
 
-        vmSizes.getAllRegions().then(function (data) {
-            self.availableRegions = data;
-        })
-
-    }
+const router = new VueRouter({
+    routes
 });
+
+const app = new Vue({
+    router
+}).$mount('#app');
 console.debug(app);
 module.exports = app;

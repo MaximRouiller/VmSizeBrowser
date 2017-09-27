@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 function getAllVmSizesForRegionPromise(regionCode) {
     return $.getJSON("/api/VmSize/region/" + regionCode);
 }

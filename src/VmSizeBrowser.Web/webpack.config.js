@@ -5,7 +5,11 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve('./wwwroot/dist')
-    },
+    },  resolve: {
+        alias: {
+          'vue': 'vue/dist/vue.js'
+        }
+      },
     module: {
         rules: [{
             test: /\.js$/,
@@ -15,6 +19,12 @@ module.exports = {
                 options: {
                     presets: ['env']
                 }
+            }
+        },{
+            test: /\.vue$/,
+            exclude: /(node_modules|lib|dist)/,
+            use: {
+                loader: 'vue-loader'
             }
         }]
     }
