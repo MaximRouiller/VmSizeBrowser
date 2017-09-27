@@ -14,7 +14,7 @@
                 <div class="col-xs-12 col-md-6 col-lg-2">
                     <div class="form-group">
                         <label for="selectedVCores">vCores</label>
-                        <vue-slider id="selectedVCores" v-model="VCoreValues" :piecewise="true" :min="0" :max="64" :interval="2" tooltip-dir="bottom"
+                        <vue-slider id="selectedVCores" v-model="VCoreValues" :piecewise="true" :lazy="true" :min="0" :max="64" :interval="2" tooltip-dir="bottom"
                             tooltip="always"></vue-slider>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <div class="col-xs-12 col-md-6 col-lg-2">
                     <div class="form-group">
                         <label for="">Minimum Memory (GB)</label>
-                        <vue-slider id="selectedMemory" v-model="VMemoryValues" :piecewise="true" :min="0" :max="512" :interval="32" tooltip-dir="bottom"
+                        <vue-slider id="selectedMemory" v-model="VMemoryValues" :piecewise="true" :lazy="true" :min="0" :max="512" :interval="32" tooltip-dir="bottom"
                             tooltip="always"></vue-slider>
                     </div>
                 </div>
@@ -79,14 +79,40 @@ export default  {
             vmSizes: [],
             availableRegions: [],
             // default values
-            selectedRegion: 'EastUS',
-            VCoreValues: [0, 64],
-            VMemoryValues: [0, 512]
+            selectedRegion: this.$route.params.region || 'EastUS',
+            VCoreValues: [this.$route.params.minVCore || 0, this.$route.params.maxVCore || 64],
+            VMemoryValues: [this.$route.params.minMemory || 0, this.$route.params.maxMemory || 512]
         };
+    },
+    watch: {
+        VCoreValues: function(current, previous){
+            if(current[0] != previous[0] || current[1] != previous[1]){
+                this.$router.push({name:'home', params: {region: this.selectedRegion, minVCore: current[0], maxVCore: current[1], minMemory: this.VMemoryValues[0], maxMemory: this.VMemoryValues[1]}});
+            }
+            
+        },
+        VMemoryValues: function(current, previous){
+            if(current[0] != previous[0] || current[1] != previous[1]){
+                this.$router.push({name:'home', params: {region: this.selectedRegion, minVCore: this.VCoreValues[0], maxVCore: this.VCoreValues[1], minMemory: current[0], maxMemory: current[1]}});
+            }
+        },
+        selectedRegion: function(current, previous){
+            if(current != previous){
+                this.$router.push({name:'home', params: {region: current, minVCore: this.VCoreValues[0], maxVCore: this.VCoreValues[1], minMemory: this.VMemoryValues[0], maxMemory: this.VMemoryValues[1]}});
+            }
+        }
+    },
+    methods: {
+        vcoreChanged: function(event){
+            console.debug('vcoreChanged', event);
+        },
+        memoryChanged: function(event){
+            console.debug('memoryChanged', event);
+        }
     },
     computed: {
         computedVmSizes: function () {
-            let self = this;
+            var self = this;
             return this.vmSizes.filter(function (item) {
                 var memoryInGb = item.memoryInMb / 1024;
                 return item.numberOfCores >= self.VCoreValues[0] && item.numberOfCores <= self.VCoreValues[1] &&
@@ -101,7 +127,7 @@ export default  {
 
     },
     mounted: function () {
-        let self = this;
+        var self = this;
         vmSizes.getAllVmSizesForRegionPromise(self.selectedRegion).then(function (data) {
             self.vmSizes = data;
         });

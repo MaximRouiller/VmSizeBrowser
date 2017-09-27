@@ -7,7 +7,8 @@ import $ from 'jquery';
 import home from './components/home.vue'
 
 const routes = [{
-    path: '/',
+    name: 'home',
+    path: '/:region?/:minVCore?/:maxVCore?/:minMemory?/:maxMemory?',
     component: home
 }];
 
@@ -18,5 +19,5 @@ const router = new VueRouter({
 const app = new Vue({
     router
 }).$mount('#app');
-console.debug(app);
+
 module.exports = app;
