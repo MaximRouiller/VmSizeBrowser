@@ -87,7 +87,7 @@ export default  {
     watch: {
         VCoreValues: function(current, previous){
             if(current[0] != previous[0] || current[1] != previous[1]){
-                if(appInsights){
+                if(document.appInsights) {
                     appInsights.trackEvent('vCoreChanged', { minVCores: current[0], maxVCores: current[1] });
                 }
                 this.$router.push({name:'home', params: {region: this.selectedRegion, minVCore: current[0], maxVCore: current[1], minMemory: this.VMemoryValues[0], maxMemory: this.VMemoryValues[1]}});
@@ -96,7 +96,7 @@ export default  {
         },
         VMemoryValues: function(current, previous){
             if(current[0] != previous[0] || current[1] != previous[1]){
-                if(appInsights){
+                if(document.appInsights) {
                     appInsights.trackEvent('memoryChanged', { minMemory: current[0], maxMemory: current[1] });
                 }
                 this.$router.push({name:'home', params: {region: this.selectedRegion, minVCore: this.VCoreValues[0], maxVCore: this.VCoreValues[1], minMemory: current[0], maxMemory: current[1]}});
@@ -104,7 +104,7 @@ export default  {
         },
         selectedRegion: function(current, previous){
             if(current != previous){
-                if(appInsights){
+                if(document.appInsights) {
                     appInsights.trackEvent('regionChanged', { region: current });
                 }
                 this.$router.push({name:'home', params: {region: current, minVCore: this.VCoreValues[0], maxVCore: this.VCoreValues[1], minMemory: this.VMemoryValues[0], maxMemory: this.VMemoryValues[1]}});
