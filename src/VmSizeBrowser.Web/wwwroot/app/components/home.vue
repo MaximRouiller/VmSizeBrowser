@@ -109,7 +109,24 @@ export default  {
                 }
                 this.$router.push({name:'home', params: {region: current, minVCore: this.VCoreValues[0], maxVCore: this.VCoreValues[1], minMemory: this.VMemoryValues[0], maxMemory: this.VMemoryValues[1]}});
             }
-        }
+        },    
+        '$route': function(route){
+            var params = route.params;
+            if(params.region !== this.selectedRegion){
+                console.debug('region changed');
+                this.selectedRegion = params.region;
+            }
+
+            if(params.minVCore !== this.VCoreValues[0] || params.maxVCore !== this.VCoreValues[1]){
+                console.debug('cores changed');
+                this.VCoreValues = [params.minVCore, params.maxVCore];
+            }
+            
+            if(params.minMemory !== this.VMemoryValues[0] || params.maxMemory !== this.VMemoryValues[1]){
+                console.debug('memory changed');
+                this.VMemoryValues = [params.minMemory, params.maxMemory];
+            }
+        }    
     },
     methods: {
         vcoreChanged: function(event){
