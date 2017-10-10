@@ -5,9 +5,10 @@
     <ApplicationInsightsAnnotationResourceId>/subscriptions/ca958577-a94e-4b72-89b4-1f348d4864a3/resourcegroups/vmSizeBrowser/providers/microsoft.insights/components/vmsizebrowser</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Scripts\ExtractVmSizes.ps1">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <Compile Remove="Scripts\**" />
+    <Content Remove="Scripts\**" />
+    <EmbeddedResource Remove="Scripts\**" />
+    <None Remove="Scripts\**" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="2.5.357" />
